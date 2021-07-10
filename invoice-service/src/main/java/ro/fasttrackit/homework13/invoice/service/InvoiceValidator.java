@@ -3,8 +3,10 @@ package ro.fasttrackit.homework13.invoice.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import ro.fasttrackit.homework13.exceptions.ValidationException;
+import ro.fasttrackit.homework13.invoice.model.InvoiceEntity;
 import ro.fasttrackit.homework13.invoice.repository.InvoiceRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

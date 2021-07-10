@@ -41,4 +41,25 @@ public class InvoiceService {
         invoiceEntity.setPayed(true);
         return invoiceRepository.save(invoiceEntity);
     }
+
+    public InvoiceEntity putInvoice(InvoiceEntity newInvoice, String invoiceId){
+        newInvoice.setId(invoiceId);
+
+        InvoiceEntity dbInvoice = invoiceRepository.findById(invoiceId)
+                .orElseThrow(() -> new ResourceNotFoundException("Couldn't find invoice with id " + invoiceId));
+        copyInvoice(newInvoice, dbInvoice);
+        return invoiceRepository.save(dbInvoice);
+    }
+
+    private void copyInvoice(InvoiceEntity newInvoice, InvoiceEntity dbInvoice) {
+        dbInvoice.setSender(newInvoice.getSender());
+        dbInvoice.setReceiver(newInvoice.getReceiver());
+        dbInvoice.setAmount(newInvoice.getAmount());
+        dbInvoice.setDescription(newInvoice.getDescription());
+    }
+
+    public void deleteInvoice(String invoiceId){
+        invoiceRepository.deleteById(invoiceId);
+    }
+
 }

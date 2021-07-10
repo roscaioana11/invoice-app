@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/invoices")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class InvoiceController {
     private final InvoiceService service;
     private final InvoiceMappers mapper;
@@ -31,5 +32,16 @@ public class InvoiceController {
     @PostMapping
     InvoiceDto addInvoice(@RequestBody InvoiceDto invoice){
         return mapper.toApi(service.addInvoice(mapper.toDb(invoice)));
+    }
+
+    @PutMapping("/{invoiceId}")
+    InvoiceDto putInvoice(@RequestBody InvoiceDto newInvoice,
+                                 @PathVariable String invoiceId){
+        return mapper.toApi(service.putInvoice(mapper.toDb(newInvoice), invoiceId));
+    }
+
+    @DeleteMapping("{invoiceId}")
+    void deleteInvoice(@PathVariable String invoiceId){
+        service.deleteInvoice(invoiceId);
     }
 }

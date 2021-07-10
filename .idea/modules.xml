@@ -4,7 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/invoice-api-client/invoice-api-client.iml" filepath="$PROJECT_DIR$/invoice-api-client/invoice-api-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/invoice-app.iml" filepath="$PROJECT_DIR$/.idea/invoice-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../invoice-payment-app-commons/invoice-payment-app-commons.iml" filepath="$PROJECT_DIR$/../invoice-payment-app-commons/invoice-payment-app-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/invoice-service/invoice-service.iml" filepath="$PROJECT_DIR$/invoice-service/invoice-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../payment-app/payment-api-client/payment-api-client.iml" filepath="$PROJECT_DIR$/../payment-app/payment-api-client/payment-api-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../payment-app/payment-app.iml" filepath="$PROJECT_DIR$/../payment-app/payment-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../payment-app/payment-service/payment-service.iml" filepath="$PROJECT_DIR$/../payment-app/payment-service/payment-service.iml" />
     </modules>
   </component>
 </project>

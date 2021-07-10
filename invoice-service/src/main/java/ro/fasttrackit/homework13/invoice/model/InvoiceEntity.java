@@ -1,5 +1,6 @@
 package ro.fasttrackit.homework13.invoice.model;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
